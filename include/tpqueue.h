@@ -9,6 +9,7 @@ class TPQueue {
         T data;
         ITEM* next;
     };
+    
  public:
      TPQueue(): head(nullptr), tail(nullptr) {}
     ~TPQueue() {
@@ -37,8 +38,7 @@ class TPQueue {
                     tail = tail->next;
                 }
             }
-        }
-        else {
+        } else {
             head = create(data);
             tail = head;
         }
@@ -50,13 +50,13 @@ class TPQueue {
             delete head;
             head = temp;
             return data;
-        }
-        else {
+        } else {
             T error;
             throw std::string(" Empty ! ");
             return error;
         }
     }
+    
  private:
     ITEM* create(const T& data) {
         ITEM* item = new ITEM;
