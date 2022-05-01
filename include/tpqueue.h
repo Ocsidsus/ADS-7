@@ -9,7 +9,7 @@ class TPQueue {
         T data;
         ITEM* next;
     };
-    
+
  public:
      TPQueue(): head(nullptr), tail(nullptr) {}
     ~TPQueue() {
@@ -56,7 +56,7 @@ class TPQueue {
             return error;
         }
     }
-    
+
  private:
     ITEM* create(const T& data) {
         ITEM* item = new ITEM;
